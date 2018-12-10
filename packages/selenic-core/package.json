@@ -1,0 +1,37 @@
+{
+  "name": "@selenic/core",
+  "version": "0.0.0",
+  "description": "selenic core",
+  "license": "MIT",
+  "author": "mkwtys <mkwtys@gmail.com>",
+  "files": [
+    "lib",
+    "!lib/__tests__"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "babel src/ -d lib/ --extensions \".ts,.js\" --ignore \"**/__tests__/**/**\"",
+    "build:types": "tsc --emitDeclarationOnly",
+    "clean": "rimraf lib/",
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.10",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "1.0.0",
+    "babel-preset-power-assert": "^3.0.0",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+lerna-debug.log
+packages/*/lib
+packages/*/package-lock.json

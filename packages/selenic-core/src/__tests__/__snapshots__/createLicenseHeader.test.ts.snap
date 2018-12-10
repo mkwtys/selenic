@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createLicenseHeader author 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader author 2`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader author 3`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   author: a <a@example.com>
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader contributors 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   contributors: c1 <c1@example.com>
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader contributors 2`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   contributors: c1, c2 <c2@example.com>
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader deps only 1`] = `
+"/**
+ * @license
+ *
+ * a:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * b:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader deps package sort by name 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * a:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * b:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * c:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader extracted 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * a:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * b:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * c:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader homepage 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   homepage: homepage
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader main package only 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader maintainers 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   maintainers: m1 <m1>
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader maintainers 2`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *   maintainers: m1, m2 <m2@example.com>
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader no package 1`] = `""`;
+
+exports[`createLicenseHeader private package 1`] = `""`;
+
+exports[`createLicenseHeader private package 2`] = `
+"/**
+ * @license
+ *
+ * b:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
