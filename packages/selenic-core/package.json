@@ -1,6 +1,6 @@
 {
   "name": "@selenic/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "selenic core",
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
@@ -16,7 +16,6 @@
     "clean": "rimraf lib/",
     "test": "jest"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
