@@ -1,6 +1,6 @@
 {
   "name": "@selenic/webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
   "files": [
@@ -16,7 +16,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@selenic/core": "^0.1.0",
+    "@selenic/core": "^0.1.1",
     "pkg-up": "^2.0.0"
   },
   "devDependencies": {
