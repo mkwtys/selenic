@@ -4,6 +4,6 @@
   "author": "a <a@example.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "*"
+    "dep": "1.0.0"
   }
 }

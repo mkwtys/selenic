@@ -1,2 +1,2 @@
-const _ = require('lodash/noop')
-console.log(_.VERSION)
+const dep = require('dep')
+console.log(dep)

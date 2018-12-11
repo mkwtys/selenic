@@ -61,5 +61,5 @@ typings/
 .next
 
 lerna-debug.log
-packages/*/lib
-packages/*/package-lock.json
+packages/**/lib
+!**/fixtures/**/node_modules
