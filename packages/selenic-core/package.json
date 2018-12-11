@@ -14,7 +14,8 @@
     "build": "babel src/ -d lib/ --extensions \".ts,.js\" --ignore \"**/__tests__/**/**\"",
     "build:types": "tsc --emitDeclarationOnly",
     "clean": "rimraf lib/",
-    "test": "jest"
+    "test": "jest",
+    "test:update": "jest -u"
   },
   "devDependencies": {
     "@babel/cli": "7.2.0",
