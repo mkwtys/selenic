@@ -7,3 +7,9 @@
 ```sh
 npm install --save-dev @selenic/webpack-plugin
 ```
+
+## Usage
+
+```js
+const SelenicWebpackPlugin = require('@selenic/webpack-plugin');
+```
