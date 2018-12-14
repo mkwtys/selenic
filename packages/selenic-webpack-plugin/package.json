@@ -35,6 +35,7 @@
     "babel-loader": "8.0.4",
     "babel-plugin-add-module-exports": "1.0.0",
     "babel-preset-power-assert": "3.0.0",
+    "extract-comments": "1.1.0",
     "jest": "23.6.0",
     "memory-fs": "0.4.1",
     "rimraf": "2.6.2",
