@@ -1,4 +1,5 @@
 import assert from 'assert'
+import extractComments from 'extract-comments'
 import MemoryFS from 'memory-fs'
 import path from 'path'
 import TerserWebpackPlugin from 'terser-webpack-plugin'
@@ -47,7 +48,9 @@ describe('Plugin', () => {
         const compiled = stats.compilation.assets['index.js']
           ? stats.compilation.assets['index.js'].source()
           : ''
-        expect(compiled).toMatchSnapshot()
+        const comments = extractComments(compiled);
+        const licenseHeader = comments.length ? `${comments[0].raw}` : ''
+        expect(licenseHeader).toMatchSnapshot()
         done()
       })
     })
