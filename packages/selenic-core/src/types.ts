@@ -1,40 +1,23 @@
-export type Person =
-  | string
-  | {
-      name?: string
-      email?: string
-      url?: string
-    }
+export type Person = {
+  name?: string
+  email?: string
+  url?: string
+}
 
-export type License =
-  | string
-  | {
-      type?: string
-      url?: string
-    }
+export type License = {
+  type?: string
+  url?: string
+}
 
 export type Package = {
   private?: boolean
   name?: string
   version?: string
   homepage?: string
-  license?: License
-  licenses?: License[]
-  author?: Person
-  contributors?: Person[]
-  maintainers?: Person[]
-  [k: string]: any
-}
-
-export type ExtractedPackage = {
-  private?: boolean
-  name?: string
-  version?: string
-  homepage?: string
-  license?: string
-  licenses?: string
-  author?: string
-  contributors?: string
-  maintainers?: string
+  license?: string | License
+  licenses?: string | (string | License)[]
+  author?: string | Person
+  contributors?: string | (string | Person)[]
+  maintainers?: string | (string | Person)[]
   [k: string]: any
 }

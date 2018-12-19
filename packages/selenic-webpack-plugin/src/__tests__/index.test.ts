@@ -48,7 +48,7 @@ describe('Plugin', () => {
         const compiled = stats.compilation.assets['index.js']
           ? stats.compilation.assets['index.js'].source()
           : ''
-        const comments = extractComments(compiled);
+        const comments = extractComments(compiled)
         const licenseHeader = comments.length ? `${comments[0].raw}` : ''
         expect(licenseHeader).toMatchSnapshot()
         done()
