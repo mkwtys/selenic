@@ -5,6 +5,8 @@ node_js:
   - '8'
   - '10'
   - '11'
+install: npm i --no-package-lock
 before_script:
   - npm run bootstrap
   - npm run build
+cache: npm
