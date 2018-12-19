@@ -1,1 +1,1 @@
-declare module "terser-webpack-plugin"
+declare module 'terser-webpack-plugin'

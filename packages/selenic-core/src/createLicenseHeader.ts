@@ -1,7 +1,7 @@
-import { ExtractedPackage, Package } from './types'
+import { Package } from './types'
 import { extract } from './extract'
 
-function createEachHeader(pkg: ExtractedPackage) {
+function createEachHeader(pkg: Package) {
   if (pkg.private || !pkg.name) {
     return ''
   }
@@ -29,8 +29,8 @@ export function createLicenseHeader({
   main,
   deps
 }: {
-  main?: Package | ExtractedPackage
-  deps?: { [key: string]: Package | ExtractedPackage }
+  main?: Package
+  deps?: { [key: string]: Package }
 } = {}) {
   const mainHeader = main ? createEachHeader(extract(main)) : ''
   const depsHeader = deps
