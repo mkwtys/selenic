@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "config:base",
-    ":timezone(Asia/Tokyo)",
-    ":automergePatch"
-  ]
+  "extends": ["config:base", ":timezone(Asia/Tokyo)", ":automergePatch"],
+  "labels": ["dependencies"]
 }
