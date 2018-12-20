@@ -1,6 +1,12 @@
 {
   "name": "@selenic/webpack-plugin",
   "version": "0.2.0",
+  "description": "webpack plugin for selenic",
+  "keywords": [
+    "license",
+    "plugin",
+    "webpack"
+  ],
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
   "files": [

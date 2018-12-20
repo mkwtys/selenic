@@ -3,6 +3,10 @@
   "private": true,
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mkwtys/selenic.git"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
@@ -23,7 +27,19 @@
     "babel-preset-power-assert": "3.0.0",
     "jest": "23.6.0",
     "lerna": "3.7.1",
+    "lerna-changelog": "0.8.2",
     "power-assert": "1.6.1"
+  },
+  "changelog": {
+    "repo": "mkwtys/selenic",
+    "cacheDir": ".changelog",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal"
+    }
   },
   "workspaces": [
     "packages/*"

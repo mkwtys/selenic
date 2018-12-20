@@ -63,3 +63,4 @@ typings/
 lerna-debug.log
 packages/**/lib
 !**/fixtures/**/node_modules
+.changelog
