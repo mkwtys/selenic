@@ -34,7 +34,7 @@
     "@types/jest": "23.3.10",
     "@types/memory-fs": "0.3.2",
     "@types/pkg-up": "2.0.0",
-    "@types/webpack": "4.4.21",
+    "@types/webpack": "4.4.22",
     "@types/webpack-sources": "0.1.5",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.6.0",
