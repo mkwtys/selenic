@@ -1,6 +1,6 @@
 {
   "name": "@selenic/webpack-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "webpack plugin for selenic",
   "keywords": [
     "license",
@@ -23,7 +23,7 @@
     "test:update": "jest -u"
   },
   "dependencies": {
-    "@selenic/core": "^0.2.0",
+    "@selenic/core": "^0.2.1",
     "pkg-up": "^2.0.0"
   },
   "devDependencies": {
