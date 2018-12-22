@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.2.1 (2018-12-21)
+
+#### :memo: Documentation
+
+- [#23](https://github.com/mkwtys/selenic/pull/23) update docs
+
 ## v0.2.0 (2018-12-19)
 
 #### :rocket: Enhancement
