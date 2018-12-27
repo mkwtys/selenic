@@ -14,7 +14,8 @@
     "clean": "lerna run clean",
     "coverage": "jest --coverage",
     "test": "jest",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "type-check": "lerna run type-check"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
