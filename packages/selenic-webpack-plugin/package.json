@@ -16,11 +16,13 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "prebuild": "npm run type-check",
     "build": "babel src/ -d lib/ --extensions \".ts,.js\" --ignore \"**/__tests__/**/**\"",
     "build:types": "tsc --emitDeclarationOnly",
     "clean": "rimraf lib/",
     "test": "jest",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@selenic/core": "^0.2.1",
