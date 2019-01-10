@@ -10,26 +10,18 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "build:types": "lerna run build:types",
     "clean": "lerna run clean",
     "coverage": "jest --coverage",
     "test": "jest",
-    "test:update": "jest -u",
-    "type-check": "lerna run type-check"
+    "test:update": "jest -u"
   },
   "devDependencies": {
-    "@babel/core": "7.2.2",
-    "@babel/preset-env": "7.2.3",
-    "@babel/preset-typescript": "7.1.0",
     "@types/jest": "23.3.12",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "23.6.0",
-    "babel-plugin-add-module-exports": "1.0.0",
-    "babel-preset-power-assert": "3.0.0",
     "jest": "23.6.0",
     "lerna": "3.10.2",
     "lerna-changelog": "0.8.2",
-    "power-assert": "1.6.1"
+    "ts-jest": "23.10.5",
+    "typescript": "3.2.2"
   },
   "changelog": {
     "repo": "mkwtys/selenic",
