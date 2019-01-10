@@ -14,27 +14,18 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prebuild": "npm run type-check",
-    "build": "babel src/ -d lib/ --extensions \".ts,.js\" --ignore \"**/__tests__/**/**\"",
-    "build:types": "tsc --emitDeclarationOnly",
+    "build": "tsc",
     "clean": "rimraf lib/",
     "test": "jest",
     "test:update": "jest -u",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@babel/cli": "7.2.3",
-    "@babel/core": "7.2.2",
-    "@babel/preset-env": "7.2.3",
-    "@babel/preset-typescript": "7.1.0",
     "@types/jest": "23.3.12",
     "@types/node": "10.12.18",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "23.6.0",
-    "babel-plugin-add-module-exports": "1.0.0",
-    "babel-preset-power-assert": "3.0.0",
     "jest": "23.6.0",
     "rimraf": "2.6.3",
+    "ts-jest": "23.10.5",
     "typescript": "3.2.2"
   },
   "publishConfig": {
