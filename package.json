@@ -13,8 +13,7 @@
     "clean": "lerna run clean",
     "coverage": "jest --coverage",
     "test": "jest",
-    "test:update": "jest -u",
-    "type-check": "lerna run type-check"
+    "test:update": "jest -u"
   },
   "devDependencies": {
     "@types/jest": "23.3.12",

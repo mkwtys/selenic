@@ -17,8 +17,7 @@
     "build": "tsc",
     "clean": "rimraf lib/",
     "test": "jest",
-    "test:update": "jest -u",
-    "type-check": "tsc --noEmit"
+    "test:update": "jest -u"
   },
   "devDependencies": {
     "@types/jest": "23.3.12",
