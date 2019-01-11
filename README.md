@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/mkwtys/selenic.svg?branch=master)](https://travis-ci.org/mkwtys/selenic)
+[![codecov](https://codecov.io/gh/mkwtys/selenic/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic)
 
 # selenic
 
