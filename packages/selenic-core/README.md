@@ -1,11 +1,9 @@
 # @selenic/core
 
-`selenic` core
-
 ## Install
 
 ```sh
-npm install --save-dev @selenic/core
+npm install @selenic/core
 ```
 
 ## Usage
@@ -40,7 +38,7 @@ createLicenseHeader({
 
 ## API
 
-### `createLicenseHeader`
+### createLicenseHeader
 
 ```ts
 function createLicenseHeader(options: {
