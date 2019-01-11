@@ -1,5 +1,16 @@
 # Change Log
 
+## v0.3.0 (2019-01-11)
+
+#### :house: Internal
+
+- Other
+  - [#52](https://github.com/mkwtys/selenic/pull/52) coverage
+- `selenic-core`
+  - [#49](https://github.com/mkwtys/selenic/pull/49) convert babel to typescript
+- `selenic-webpack-plugin`
+  - [#44](https://github.com/mkwtys/selenic/pull/44) remove packages/selenic-webpack-plugin
+
 ## v0.2.1 (2018-12-21)
 
 #### :memo: Documentation
