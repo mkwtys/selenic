@@ -16,7 +16,7 @@
     "test:update": "jest -u"
   },
   "devDependencies": {
-    "@types/jest": "23.3.12",
+    "@types/jest": "23.3.13",
     "jest": "23.6.0",
     "lerna": "3.10.5",
     "lerna-changelog": "0.8.2",
