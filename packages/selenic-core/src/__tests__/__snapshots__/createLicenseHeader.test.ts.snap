@@ -180,6 +180,66 @@ exports[`createLicenseHeader maintainers 2`] = `
 "
 `;
 
+exports[`createLicenseHeader multiple versions different license 1`] = `
+"/**
+ * @license
+ *
+ * c:
+ *   version: 1.0.0
+ *   license: MIT
+ *
+ *   version: 2.0.0
+ *   license: ISC
+ *
+ *   version: 3.0.0
+ *   license: MIT OR ISC
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader multiple versions same info 1`] = `
+"/**
+ * @license
+ *
+ * c:
+ *   version: 1.0.0, 2.0.0, 3.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader multiple versions semver sort 1`] = `
+"/**
+ * @license
+ *
+ * a:
+ *   version: 1.0.0, v2.0.0, 3.0.0-alpha.1, 4.0.0-rc.1
+ *   license: MIT
+ *
+ */
+"
+`;
+
+exports[`createLicenseHeader multiple versions some same info 1`] = `
+"/**
+ * @license
+ *
+ * c:
+ *   version: 1.0.0
+ *   license: MIT OR ISC
+ *
+ *   version: 2.0.0, 4.0.0
+ *   license: MIT
+ *
+ *   version: 3.0.0
+ *   license: ISC
+ *
+ */
+"
+`;
+
 exports[`createLicenseHeader no package 1`] = `""`;
 
 exports[`createLicenseHeader private package 1`] = `""`;
