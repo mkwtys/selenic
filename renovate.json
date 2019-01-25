@@ -5,5 +5,5 @@
     ":automergePatch",
     ":semanticCommitsDisabled"
   ],
-  "labels": ["dependencies"]
+  "labels": ["internal"]
 }
