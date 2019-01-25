@@ -49,9 +49,7 @@ export function createLicenseHeader({
         }
         const results: Package[] = []
         depsPkgs
-          .sort((a, b) =>
-            !a.version || !b.version ? 0 : compare(a.version, b.version)
-          )
+          .sort((a, b) => compare(a.version, b.version))
           .forEach(pkg => {
             const samePkgs = results.filter(
               resultPkg =>
