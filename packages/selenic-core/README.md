@@ -20,7 +20,19 @@ createLicenseHeader({
     'dep-package': {
       name: 'dep-package',
       license: 'MIT'
-    }
+    },
+    'dep-package2': [
+      {
+        name: 'dep-package2',
+        version: '1.0.0',
+        license: 'MIT'
+      },
+      {
+        name: 'dep-package2',
+        version: '2.0.0',
+        license: 'MIT'
+      }
+    ]
   }
 })
 
@@ -33,6 +45,10 @@ createLicenseHeader({
 //  * dep-package:
 //  *   license: MIT
 //  *
+//  * dep-package2:
+//  *   version: 1.0.0, 2.0.0
+//  *   license: MIT
+//  *
 //  */
 ```
 
@@ -41,10 +57,10 @@ createLicenseHeader({
 ### createLicenseHeader
 
 ```ts
-function createLicenseHeader(options: {
-  main?: Package
-  deps?: {
-    [key: string]: Package
-  }
-}): string
+function createLicenseHeader({ main, deps }?: {
+    main?: Package;
+    deps?: {
+        [key: string]: Package | Package[];
+    };
+}): string;
 ```
