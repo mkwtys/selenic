@@ -9,15 +9,19 @@ export type License = {
   url?: string
 }
 
-export type Package = {
-  private?: boolean
-  name?: string
-  version?: string
-  homepage?: string
-  license?: string | License
-  licenses?: string | (string | License)[]
-  author?: string | Person
-  contributors?: string | (string | Person)[]
-  maintainers?: string | (string | Person)[]
-  [k: string]: any
-}
+export type Package =
+  | {
+      name: string
+      version: string
+      homepage?: string
+      license?: string | License
+      licenses?: string | (string | License)[]
+      author?: string | Person
+      contributors?: string | (string | Person)[]
+      maintainers?: string | (string | Person)[]
+      [k: string]: any
+    }
+  | {
+      private?: boolean
+      [k: string]: any
+    }
