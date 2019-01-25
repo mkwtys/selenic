@@ -247,4 +247,120 @@ describe('createLicenseHeader', () => {
       })
     ).toMatchSnapshot()
   })
+
+  describe('multiple versions', () => {
+    it('different license', () => {
+      expect(
+        createLicenseHeader({
+          deps: {
+            c: [
+              {
+                name: 'c',
+                version: '2.0.0',
+                license: 'ISC'
+              },
+              {
+                name: 'c',
+                version: '1.0.0',
+                license: 'MIT'
+              },
+              {
+                name: 'c',
+                version: '3.0.0',
+                license: 'MIT OR ISC'
+              }
+            ]
+          }
+        })
+      ).toMatchSnapshot()
+    })
+
+    it('same info', () => {
+      expect(
+        createLicenseHeader({
+          deps: {
+            c: [
+              {
+                name: 'c',
+                version: '2.0.0',
+                license: 'MIT'
+              },
+              {
+                name: 'c',
+                version: '1.0.0',
+                license: 'MIT'
+              },
+              {
+                name: 'c',
+                version: '3.0.0',
+                license: 'MIT'
+              }
+            ]
+          }
+        })
+      ).toMatchSnapshot()
+    })
+
+    it('some same info', () => {
+      expect(
+        createLicenseHeader({
+          deps: {
+            c: [
+              {
+                name: 'c',
+                version: '3.0.0',
+                license: 'ISC'
+              },
+              {
+                name: 'c',
+                version: '2.0.0',
+                license: 'MIT'
+              },
+              {
+                name: 'c',
+                version: '1.0.0',
+                license: 'MIT OR ISC'
+              },
+              {
+                name: 'c',
+                version: '4.0.0',
+                license: 'MIT'
+              }
+            ]
+          }
+        })
+      ).toMatchSnapshot()
+    })
+
+    it('semver sort', () => {
+      expect(
+        createLicenseHeader({
+          deps: {
+            a: [
+              {
+                name: 'a',
+                version: '3.0.0-alpha.1',
+                license: 'MIT'
+              },
+              {
+                name: 'a',
+                version: 'v2.0.0',
+                license: 'MIT'
+              },
+              {
+                name: 'a',
+                version: '1.0.0',
+                license: 'MIT'
+              },
+              {
+                name: 'a',
+                version: '4.0.0-rc.1',
+                license: 'MIT'
+              }
+            ]
+          }
+        })
+      ).toMatchSnapshot()
+    })
+  })
 })
