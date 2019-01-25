@@ -1,5 +1,25 @@
 # Change Log
 
+## v0.5.0 (2019-01-25)
+
+#### :rocket: Enhancement
+* `selenic-core`
+  * [#59](https://github.com/mkwtys/selenic/pull/59) Package to union type of package and private package
+
+## v0.4.0 (2019-01-25)
+
+#### :rocket: Enhancement
+* `selenic-core`
+  * [#57](https://github.com/mkwtys/selenic/pull/57) feat multi versions
+
+#### :house: Internal
+* `selenic-core`
+  * [#58](https://github.com/mkwtys/selenic/pull/58) Pin dependency @types/semver to 5.5.0
+* Other
+  * [#56](https://github.com/mkwtys/selenic/pull/56) Update dependency lerna to v3.10.7
+  * [#54](https://github.com/mkwtys/selenic/pull/54) Update dependency @types/jest to v23.3.13
+  * [#53](https://github.com/mkwtys/selenic/pull/53) Update dependency typescript to v3.2.4
+
 ## v0.3.0 (2019-01-11)
 
 #### :house: Internal
