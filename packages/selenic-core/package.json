@@ -29,8 +29,8 @@
     "semver": "^5.6.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-typescript": "^7.1.0",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-typescript": "7.1.0",
     "@types/jest": "23.3.13",
     "@types/node": "10.12.19",
     "@types/semver": "5.5.0",
