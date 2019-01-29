@@ -5,6 +5,8 @@
   "keywords": [
     "license"
   ],
+  "homepage": "https://github.com/mkwtys/selenic",
+  "bugs": "https://github.com/mkwtys/selenic/issues",
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
   "files": [
@@ -13,6 +15,10 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkwtys/selenic.git"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib/",
