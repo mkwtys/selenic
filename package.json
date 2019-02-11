@@ -20,7 +20,7 @@
     "@babel/preset-typescript": "7.1.0",
     "@types/jest": "24.0.0",
     "jest": "24.1.0",
-    "lerna": "3.11.0",
+    "lerna": "3.11.1",
     "lerna-changelog": "0.8.2",
     "typescript": "3.3.3"
   },
