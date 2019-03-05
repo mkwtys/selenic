@@ -32,7 +32,8 @@
       "enhancement": ":rocket: Enhancement",
       "bug": ":bug: Bug Fix",
       "documentation": ":memo: Documentation",
-      "internal": ":house: Internal"
+      "internal": ":house: Internal",
+      "dependencies": ":arrow_up: Dependencies"
     }
   },
   "workspaces": [
