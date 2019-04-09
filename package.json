@@ -22,7 +22,7 @@
     "jest": "24.7.1",
     "lerna": "3.13.2",
     "lerna-changelog": "0.8.2",
-    "typescript": "3.4.2"
+    "typescript": "3.4.3"
   },
   "changelog": {
     "repo": "mkwtys/selenic",
