@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "7.7.1",
-    "@babel/preset-typescript": "7.7.0",
+    "@babel/preset-typescript": "7.7.2",
     "@types/jest": "24.0.22",
     "jest": "24.9.0",
     "lerna": "3.18.3",
