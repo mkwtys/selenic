@@ -1,5 +1,21 @@
 # Change Log
 
+## v0.8.0 (2019-11-08)
+
+#### :arrow_up: Dependencies
+* `selenic-core`
+  * [#189](https://github.com/mkwtys/selenic/pull/189) Update babel monorepo (minor)
+  * [#190](https://github.com/mkwtys/selenic/pull/190) Update dependency typescript to v3.7.2
+  * [#184](https://github.com/mkwtys/selenic/pull/184) Update dependency @types/semver to v6.2.0
+  * [#182](https://github.com/mkwtys/selenic/pull/182) Update dependency @types/node to v10.17.0
+  * [#159](https://github.com/mkwtys/selenic/pull/159) Update dependency jest to v24.9.0
+  * [#158](https://github.com/mkwtys/selenic/pull/158) Update dependency rimraf to v3
+  * [#139](https://github.com/mkwtys/selenic/pull/139) Update dependency @babel/preset-env to v7.5.0
+* Other
+  * [#178](https://github.com/mkwtys/selenic/pull/178) Update dependency lerna to v3.18.1
+  * [#163](https://github.com/mkwtys/selenic/pull/163) Bump mixin-deep from 1.3.1 to 1.3.2
+  * [#153](https://github.com/mkwtys/selenic/pull/153) Bump lodash from 4.17.11 to 4.17.15
+
 ## v0.7.0 (2019-06-17)
 
 #### :boom: Breaking Change
