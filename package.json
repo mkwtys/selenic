@@ -1,42 +1,45 @@
 {
-  "name": "selenic",
-  "private": true,
+  "name": "@selenic/core",
+  "version": "0.8.0",
+  "description": "selenic core",
+  "keywords": [
+    "license"
+  ],
+  "homepage": "https://github.com/mkwtys/selenic",
+  "bugs": "https://github.com/mkwtys/selenic/issues",
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
+  "files": [
+    "lib",
+    "!lib/__tests__"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mkwtys/selenic.git"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "build": "lerna run build",
-    "clean": "lerna run clean",
+    "build": "tsc",
     "coverage": "jest --coverage",
+    "clean": "rimraf lib/",
     "test": "jest",
     "test:update": "jest -u"
+  },
+  "dependencies": {
+    "semver": "^6.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "7.7.1",
     "@babel/preset-typescript": "7.7.2",
     "@types/jest": "24.0.22",
+    "@types/node": "10.17.4",
+    "@types/semver": "6.2.0",
     "jest": "24.9.0",
-    "lerna": "3.18.4",
-    "lerna-changelog": "0.8.2",
+    "rimraf": "3.0.0",
     "typescript": "3.7.2"
   },
-  "changelog": {
-    "repo": "mkwtys/selenic",
-    "cacheDir": ".changelog",
-    "labels": {
-      "breaking": ":boom: Breaking Change",
-      "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "documentation": ":memo: Documentation",
-      "internal": ":house: Internal",
-      "dependencies": ":arrow_up: Dependencies"
-    }
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  "publishConfig": {
+    "access": "public"
+  }
 }

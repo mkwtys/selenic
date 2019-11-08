@@ -60,7 +60,6 @@ typings/
 # next.js build output
 .next
 
-lerna-debug.log
-packages/**/lib
+lib
 !**/fixtures/**/node_modules
 .changelog
