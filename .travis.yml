@@ -7,7 +7,6 @@ node_js:
   - '13'
 before_script:
   - npm i codecov
-  - npm run bootstrap -- --no-ci
   - npm run build
 after_success:
   - npm run coverage
