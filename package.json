@@ -7,6 +7,10 @@
   ],
   "homepage": "https://github.com/mkwtys/selenic",
   "bugs": "https://github.com/mkwtys/selenic/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mkwtys/selenic.git"
+  },
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
   "files": [
@@ -15,14 +19,10 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/mkwtys/selenic.git"
-  },
   "scripts": {
     "build": "tsc",
-    "coverage": "jest --coverage",
     "clean": "rimraf lib/",
+    "coverage": "jest --coverage",
     "test": "jest",
     "test:update": "jest -u"
   },
