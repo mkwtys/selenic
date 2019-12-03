@@ -22,9 +22,7 @@ function extractHomepage(homepage: string) {
   try {
     const url = new URL(homepage)
     return `${url.protocol}//${url.host}${url.pathname}`
-  } catch {
-    return ''
-  }
+  } catch {}
 }
 
 export function extract(pkg: Package): Package {
@@ -49,6 +47,6 @@ export function extract(pkg: Package): Package {
     contributors: Array.isArray(pkg.contributors)
       ? pkg.contributors.map(extractPerson).join(', ')
       : pkg.contributors,
-    homepage: pkg.homepage ? extractHomepage(pkg.homepage) : ''
+    homepage: pkg.homepage ? extractHomepage(pkg.homepage) : pkg.homepage
   }
 }

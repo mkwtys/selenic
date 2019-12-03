@@ -117,7 +117,7 @@ describe('@selenic/core: extract', () => {
     const extracted = extract({
       homepage: 'homepage'
     })
-    assert(extracted.homepage === '')
+    assert(extracted.homepage === undefined)
   })
 
   it('private package', () => {
