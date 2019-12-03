@@ -21,13 +21,13 @@ function createEachHeader(pkg: Package, options: { hierarchy?: number } = {}) {
       : ''
   }
 ${props
-    .map(prop =>
-      pkg[prop]
-        ? ` *   ${prop}: ${pkg[prop]}
+  .map(prop =>
+    pkg[prop]
+      ? ` *   ${prop}: ${pkg[prop]}
 `
-        : ''
-    )
-    .join('')}`
+      : ''
+  )
+  .join('')}`
 }
 
 export function createLicenseHeader({
