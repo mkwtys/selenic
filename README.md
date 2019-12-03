@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mkwtys/selenic.svg?branch=master)](https://travis-ci.org/mkwtys/selenic)
+[![Actions Status](https://github.com/mkwtys/selenic/workflows/Node%20CI/badge.svg)](https://github.com/mkwtys/selenic/actions?query=workflow%3A%22Node+CI%22)
 [![codecov](https://codecov.io/gh/mkwtys/selenic/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic)
 
 # @selenic/core
