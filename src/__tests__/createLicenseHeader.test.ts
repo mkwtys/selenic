@@ -158,7 +158,7 @@ describe('createLicenseHeader', () => {
           name: 'main',
           version: '0.0.0',
           license: 'MIT',
-          homepage: 'homepage'
+          homepage: 'http://example.com'
         }
       })
     ).toMatchSnapshot()

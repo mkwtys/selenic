@@ -103,7 +103,21 @@ describe('@selenic/core: extract', () => {
     const extracted = extract({
       homepage: 'http://example.com'
     })
-    assert(extracted.homepage === 'http://example.com')
+    assert(extracted.homepage === 'http://example.com/')
+  })
+
+  it('homepage with hash', () => {
+    const extracted = extract({
+      homepage: 'http://example.com#readme'
+    })
+    assert(extracted.homepage === 'http://example.com/')
+  })
+
+  it('homepage invalid url', () => {
+    const extracted = extract({
+      homepage: 'homepage'
+    })
+    assert(extracted.homepage === '')
   })
 
   it('private package', () => {
