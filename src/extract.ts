@@ -21,7 +21,7 @@ function extractLicense(license: string | License) {
 function extractHomepage(homepage: string) {
   try {
     const url = new URL(homepage)
-    return `${url.protocol}//${url.host}${url.pathname}`
+    return `${url.origin}${url.pathname}${url.search}`
   } catch {
     return homepage
   }

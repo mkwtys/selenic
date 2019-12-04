@@ -113,6 +113,26 @@ describe('@selenic/core: extract', () => {
     assert(extracted.homepage === 'http://example.com/')
   })
 
+  it('homepage with searchParams', () => {
+    const extracted = extract({
+      homepage: 'http://example.com?query=string&query2=string2'
+    })
+    assert.equal(
+      extracted.homepage,
+      'http://example.com/?query=string&query2=string2'
+    )
+  })
+
+  it('homepage with hash and searchParams', () => {
+    const extracted = extract({
+      homepage: 'http://example.com?query=string&query2=string2#readme'
+    })
+    assert.equal(
+      extracted.homepage,
+      'http://example.com/?query=string&query2=string2'
+    )
+  })
+
   it('homepage invalid url', () => {
     const extracted = extract({
       homepage: 'homepage'
