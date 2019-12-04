@@ -21,7 +21,11 @@ function extractLicense(license: string | License) {
 function extractHomepage(homepage: string) {
   try {
     const url = new URL(homepage)
-    return `${url.origin}${url.pathname}${url.search}`
+    let h = `${url.origin}${url.pathname}${url.search}`
+    if (url.hostname !== 'github.com') {
+      return `${h}${url.hash}`
+    }
+    return h
   } catch {
     return homepage
   }

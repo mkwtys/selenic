@@ -110,7 +110,7 @@ describe('@selenic/core: extract', () => {
     const extracted = extract({
       homepage: 'http://example.com#readme'
     })
-    assert(extracted.homepage === 'http://example.com/')
+    assert(extracted.homepage === 'http://example.com/#readme')
   })
 
   it('homepage with searchParams', () => {
@@ -129,7 +129,34 @@ describe('@selenic/core: extract', () => {
     })
     assert.equal(
       extracted.homepage,
-      'http://example.com/?query=string&query2=string2'
+      'http://example.com/?query=string&query2=string2#readme'
+    )
+  })
+
+  it('homepage `github.com` with hash', () => {
+    const extracted = extract({
+      homepage: 'http://github.com#readme'
+    })
+    assert(extracted.homepage === 'http://github.com/')
+  })
+
+  it('homepage `github.com` with searchParams', () => {
+    const extracted = extract({
+      homepage: 'http://github.com?query=string&query2=string2'
+    })
+    assert.equal(
+      extracted.homepage,
+      'http://github.com/?query=string&query2=string2'
+    )
+  })
+
+  it('homepage `github.com` with hash and searchParams', () => {
+    const extracted = extract({
+      homepage: 'http://github.com?query=string&query2=string2#readme'
+    })
+    assert.equal(
+      extracted.homepage,
+      'http://github.com/?query=string&query2=string2'
     )
   })
 
