@@ -140,6 +140,20 @@ describe('@selenic/core: extract', () => {
     assert(extracted.homepage === 'http://github.com/')
   })
 
+  it('homepage `github.com` with hash (not #readme)', () => {
+    const extracted = extract({
+      homepage: 'http://github.com#repo-meta-edit'
+    })
+    assert.equal(extracted.homepage, 'http://github.com/#repo-meta-edit')
+  })
+
+  it('homepage `github.com` with hash', () => {
+    const extracted = extract({
+      homepage: 'http://github.com#repo-meta-edit'
+    })
+    assert.equal(extracted.homepage, 'http://github.com/#repo-meta-edit')
+  })
+
   it('homepage `github.com` with searchParams', () => {
     const extracted = extract({
       homepage: 'http://github.com?query=string&query2=string2'
@@ -157,6 +171,16 @@ describe('@selenic/core: extract', () => {
     assert.equal(
       extracted.homepage,
       'http://github.com/?query=string&query2=string2'
+    )
+  })
+
+  it('homepage `github.com` with hash (not #reaeme) and searchParams', () => {
+    const extracted = extract({
+      homepage: 'http://github.com?query=string&query2=string2#repo-meta-edit'
+    })
+    assert.equal(
+      extracted.homepage,
+      'http://github.com/?query=string&query2=string2#repo-meta-edit'
     )
   })
 
