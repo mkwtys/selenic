@@ -22,7 +22,9 @@ function extractHomepage(homepage: string) {
   try {
     const url = new URL(homepage)
     return `${url.protocol}//${url.host}${url.pathname}`
-  } catch {}
+  } catch {
+    return homepage
+  }
 }
 
 export function extract(pkg: Package): Package {
