@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createLicenseHeader author 1`] = `
+exports[`author 1`] = `
 "/**
  * @license
  *
@@ -13,7 +13,7 @@ exports[`createLicenseHeader author 1`] = `
 "
 `;
 
-exports[`createLicenseHeader author 2`] = `
+exports[`author 2`] = `
 "/**
  * @license
  *
@@ -26,7 +26,7 @@ exports[`createLicenseHeader author 2`] = `
 "
 `;
 
-exports[`createLicenseHeader author 3`] = `
+exports[`author 3`] = `
 "/**
  * @license
  *
@@ -39,7 +39,7 @@ exports[`createLicenseHeader author 3`] = `
 "
 `;
 
-exports[`createLicenseHeader contributors 1`] = `
+exports[`contributors 1`] = `
 "/**
  * @license
  *
@@ -52,7 +52,7 @@ exports[`createLicenseHeader contributors 1`] = `
 "
 `;
 
-exports[`createLicenseHeader contributors 2`] = `
+exports[`contributors 2`] = `
 "/**
  * @license
  *
@@ -65,7 +65,7 @@ exports[`createLicenseHeader contributors 2`] = `
 "
 `;
 
-exports[`createLicenseHeader deps only 1`] = `
+exports[`deps only 1`] = `
 "/**
  * @license
  *
@@ -81,31 +81,7 @@ exports[`createLicenseHeader deps only 1`] = `
 "
 `;
 
-exports[`createLicenseHeader deps package sort by name 1`] = `
-"/**
- * @license
- *
- * main:
- *   version: 0.0.0
- *   license: MIT
- *
- * a:
- *   version: 0.0.0
- *   license: MIT
- *
- * b:
- *   version: 0.0.0
- *   license: MIT
- *
- * c:
- *   version: 0.0.0
- *   license: MIT
- *
- */
-"
-`;
-
-exports[`createLicenseHeader extracted 1`] = `
+exports[`deps package sort by name 1`] = `
 "/**
  * @license
  *
@@ -129,7 +105,7 @@ exports[`createLicenseHeader extracted 1`] = `
 "
 `;
 
-exports[`createLicenseHeader homepage 1`] = `
+exports[`homepage 1`] = `
 "/**
  * @license
  *
@@ -142,7 +118,7 @@ exports[`createLicenseHeader homepage 1`] = `
 "
 `;
 
-exports[`createLicenseHeader main package only 1`] = `
+exports[`main package only 1`] = `
 "/**
  * @license
  *
@@ -154,7 +130,7 @@ exports[`createLicenseHeader main package only 1`] = `
 "
 `;
 
-exports[`createLicenseHeader maintainers 1`] = `
+exports[`maintainers 1`] = `
 "/**
  * @license
  *
@@ -167,7 +143,7 @@ exports[`createLicenseHeader maintainers 1`] = `
 "
 `;
 
-exports[`createLicenseHeader maintainers 2`] = `
+exports[`maintainers 2`] = `
 "/**
  * @license
  *
@@ -180,7 +156,7 @@ exports[`createLicenseHeader maintainers 2`] = `
 "
 `;
 
-exports[`createLicenseHeader multiple versions different license 1`] = `
+exports[`multi versions: different license 1`] = `
 "/**
  * @license
  *
@@ -198,7 +174,7 @@ exports[`createLicenseHeader multiple versions different license 1`] = `
 "
 `;
 
-exports[`createLicenseHeader multiple versions same info 1`] = `
+exports[`multi versions: same info 1`] = `
 "/**
  * @license
  *
@@ -210,7 +186,7 @@ exports[`createLicenseHeader multiple versions same info 1`] = `
 "
 `;
 
-exports[`createLicenseHeader multiple versions semver sort 1`] = `
+exports[`multi versions: semver sort 1`] = `
 "/**
  * @license
  *
@@ -222,7 +198,7 @@ exports[`createLicenseHeader multiple versions semver sort 1`] = `
 "
 `;
 
-exports[`createLicenseHeader multiple versions some same info 1`] = `
+exports[`multi versions: some same info 1`] = `
 "/**
  * @license
  *
@@ -240,11 +216,35 @@ exports[`createLicenseHeader multiple versions some same info 1`] = `
 "
 `;
 
-exports[`createLicenseHeader no package 1`] = `""`;
+exports[`no package 1`] = `""`;
 
-exports[`createLicenseHeader private package 1`] = `""`;
+exports[`pkg is extracted 1`] = `
+"/**
+ * @license
+ *
+ * main:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * a:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * b:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ * c:
+ *   version: 0.0.0
+ *   license: MIT
+ *
+ */
+"
+`;
 
-exports[`createLicenseHeader private package 2`] = `
+exports[`private package 1`] = `""`;
+
+exports[`private package 2`] = `
 "/**
  * @license
  *
