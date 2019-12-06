@@ -30,7 +30,7 @@
     "semver": "^6.0.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.7.4",
+    "@babel/preset-env": "7.7.5",
     "@babel/preset-typescript": "7.7.4",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
