@@ -26,6 +26,34 @@
     "test": "jest",
     "test:update": "jest -u"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": 8
+          }
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "pringWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "fixtures"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "fixtures"
+    ]
+  },
   "dependencies": {
     "semver": "^7.0.0"
   },
