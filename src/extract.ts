@@ -47,12 +47,8 @@ export function extract(pkg: Package): Package {
       ? extractLicense(pkg.license)
       : pkg.license,
     author: pkg.author ? extractPerson(pkg.author) : pkg.author,
-    maintainers: Array.isArray(pkg.maintainers)
-      ? pkg.maintainers.map(extractPerson).join(', ')
-      : pkg.maintainers,
-    contributors: Array.isArray(pkg.contributors)
-      ? pkg.contributors.map(extractPerson).join(', ')
-      : pkg.contributors,
+    maintainers: Array.isArray(pkg.maintainers) ? pkg.maintainers.map(extractPerson).join(', ') : pkg.maintainers,
+    contributors: Array.isArray(pkg.contributors) ? pkg.contributors.map(extractPerson).join(', ') : pkg.contributors,
     homepage: pkg.homepage ? extractHomepage(pkg.homepage) : pkg.homepage
   }
 }
