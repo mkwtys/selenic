@@ -6,14 +6,7 @@ function createEachHeader(pkg: Package, options: { hierarchy?: number } = {}) {
   if (pkg.private || !pkg.name) {
     return ''
   }
-  const props = [
-    'version',
-    'license',
-    'author',
-    'maintainers',
-    'contributors',
-    'homepage'
-  ]
+  const props = ['version', 'license', 'author', 'maintainers', 'contributors', 'homepage']
   return ` *${
     !options.hierarchy || options.hierarchy === 1
       ? `
@@ -59,15 +52,9 @@ export function createLicenseHeader({
                 pkg.contributors === resultPkg.contributors &&
                 pkg.homepage === resultPkg.homepage
             )
-            samePkgs.length
-              ? (samePkgs[0].version = `${samePkgs[0].version}, ${pkg.version}`)
-              : results.push(pkg)
+            samePkgs.length ? (samePkgs[0].version = `${samePkgs[0].version}, ${pkg.version}`) : results.push(pkg)
           })
-        return results
-          .map((pkg, i) =>
-            createEachHeader(extract(pkg), { hierarchy: i === 0 ? 1 : 2 })
-          )
-          .join('')
+        return results.map((pkg, i) => createEachHeader(extract(pkg), { hierarchy: i === 0 ? 1 : 2 })).join('')
       })
       .join('')
   }
