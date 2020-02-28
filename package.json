@@ -65,7 +65,7 @@
     "@types/semver": "7.1.0",
     "jest": "25.1.0",
     "rimraf": "3.0.2",
-    "typescript": "3.8.2"
+    "typescript": "3.8.3"
   },
   "publishConfig": {
     "access": "public"
