@@ -13,12 +13,12 @@
   },
   "license": "MIT",
   "author": "mkwtys <mkwtys@gmail.com>",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib",
     "!lib/__tests__"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib/",
@@ -69,5 +69,17 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "changelog": {
+    "repo": "mkwtys/selenic",
+    "cacheDir": ".changelog",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "dependencies": ":arrow_up: Dependencies",
+      "internal": ":house: Internal"
+    }
   }
 }
