@@ -1,9 +1,10 @@
-[![Actions Status](https://github.com/mkwtys/selenic/workflows/Node%20CI/badge.svg)](https://github.com/mkwtys/selenic/actions?query=workflow%3A%22Node+CI%22)
-[![codecov](https://codecov.io/gh/mkwtys/selenic/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic)
-
 # @selenic/core
 
-selenic is create license header of packages.
+[![Actions Status](https://github.com/mkwtys/selenic/workflows/Node%20CI/badge.svg)](https://github.com/mkwtys/selenic/actions?query=workflow%3A%22Node+CI%22)
+[![codecov](https://codecov.io/gh/mkwtys/selenic/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/selenic)
+[![npm version](https://badge.fury.io/js/%40selenic%2Fcore.svg)](https://badge.fury.io/js/%40selenic%2Fcore)
+
+> selenic is create license header of packages.
 
 ## Install
 
