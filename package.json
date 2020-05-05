@@ -63,7 +63,7 @@
     "@types/jest": "25.2.1",
     "@types/node": "12.12.37",
     "@types/semver": "7.1.0",
-    "jest": "26.0.0",
+    "jest": "26.0.1",
     "rimraf": "3.0.2",
     "typescript": "3.8.3"
   },
