@@ -7,25 +7,14 @@ function createEachHeader(pkg: Package, options: { hierarchy?: number } = {}) {
     return ''
   }
   const props = ['version', 'license', 'author', 'maintainers', 'contributors', 'homepage']
-  return ` *${
-    !options.hierarchy || options.hierarchy === 1
-      ? `
- * ${pkg.name}:`
-      : ''
-  }
-${props
-  .map(prop =>
-    pkg[prop]
-      ? ` *   ${prop}: ${pkg[prop]}
-`
-      : ''
-  )
-  .join('')}`
+  return ` *${!options.hierarchy || options.hierarchy === 1 ? `\n * ${pkg.name}:` : ''}\n${props
+    .map((prop) => (pkg[prop] ? ` *   ${prop}: ${pkg[prop]}\n` : ''))
+    .join('')}`
 }
 
 export function createLicenseHeader({
   main,
-  deps
+  deps,
 }: {
   main?: Package
   deps?: { [key: string]: Package | Package[] }
@@ -35,7 +24,7 @@ export function createLicenseHeader({
   if (deps) {
     depsHeader = Object.keys(deps)
       .sort()
-      .map(packageName => {
+      .map((packageName) => {
         const depsPkgs = deps[packageName]
         if (!Array.isArray(depsPkgs)) {
           return createEachHeader(extract(depsPkgs))
@@ -43,16 +32,21 @@ export function createLicenseHeader({
         const results: Package[] = []
         depsPkgs
           .sort((a, b) => compare(a.version, b.version))
-          .forEach(pkg => {
+          .forEach((pkg) => {
             const samePkgs = results.filter(
-              resultPkg =>
+              (resultPkg) =>
+                pkg.name === resultPkg.name &&
                 pkg.license === resultPkg.license &&
                 pkg.author === resultPkg.author &&
                 pkg.maintainers === resultPkg.maintainers &&
                 pkg.contributors === resultPkg.contributors &&
                 pkg.homepage === resultPkg.homepage
             )
-            samePkgs.length ? (samePkgs[0].version = `${samePkgs[0].version}, ${pkg.version}`) : results.push(pkg)
+            if (samePkgs.length) {
+              samePkgs[0].version = `${samePkgs[0].version}, ${pkg.version}`
+            } else {
+              results.push(pkg)
+            }
           })
         return results.map((pkg, i) => createEachHeader(extract(pkg), { hierarchy: i === 0 ? 1 : 2 })).join('')
       })
@@ -61,9 +55,5 @@ export function createLicenseHeader({
   if (mainHeader + depsHeader === '') {
     return ''
   }
-  return `/**
- * @license
-${mainHeader}${depsHeader} *
- */
-`
+  return `/**\n * @license\n${mainHeader}${depsHeader} *\n */\n`
 }

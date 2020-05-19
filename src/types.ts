@@ -15,10 +15,10 @@ export type Package =
       version: string
       homepage?: string
       license?: string | License
-      licenses?: string | (string | License)[]
+      licenses?: string | Array<string | License>
       author?: string | Person
-      contributors?: string | (string | Person)[]
-      maintainers?: string | (string | Person)[]
+      contributors?: string | Array<string | Person>
+      maintainers?: string | Array<string | Person>
       [k: string]: any
     }
   | {
