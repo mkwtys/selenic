@@ -25,7 +25,7 @@ ${props
 
 export function createLicenseHeader({
   main,
-  deps
+  deps,
 }: {
   main?: Package
   deps?: { [key: string]: Package | Package[] }
@@ -35,7 +35,7 @@ export function createLicenseHeader({
   if (deps) {
     depsHeader = Object.keys(deps)
       .sort()
-      .map(packageName => {
+      .map((packageName) => {
         const depsPkgs = deps[packageName]
         if (!Array.isArray(depsPkgs)) {
           return createEachHeader(extract(depsPkgs))
@@ -43,9 +43,9 @@ export function createLicenseHeader({
         const results: Package[] = []
         depsPkgs
           .sort((a, b) => compare(a.version, b.version))
-          .forEach(pkg => {
+          .forEach((pkg) => {
             const samePkgs = results.filter(
-              resultPkg =>
+              (resultPkg) =>
                 pkg.license === resultPkg.license &&
                 pkg.author === resultPkg.author &&
                 pkg.maintainers === resultPkg.maintainers &&

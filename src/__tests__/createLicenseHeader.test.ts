@@ -10,8 +10,8 @@ it('main package only', () => {
       main: {
         name: 'main',
         version: '0.0.0',
-        license: 'MIT'
-      }
+        license: 'MIT',
+      },
     })
   ).toMatchSnapshot()
 })
@@ -22,25 +22,25 @@ it('deps package sort by name', () => {
       main: {
         name: 'main',
         version: '0.0.0',
-        license: 'MIT'
+        license: 'MIT',
       },
       deps: {
         b: {
           name: 'b',
           version: '0.0.0',
-          license: 'MIT'
+          license: 'MIT',
         },
         a: {
           name: 'a',
           version: '0.0.0',
-          license: 'MIT'
+          license: 'MIT',
         },
         c: {
           name: 'c',
           version: '0.0.0',
-          license: 'MIT'
-        }
-      }
+          license: 'MIT',
+        },
+      },
     })
   ).toMatchSnapshot()
 })
@@ -52,8 +52,8 @@ it('author', () => {
         name: 'main',
         version: '0.0.0',
         license: 'MIT',
-        author: 'a'
-      }
+        author: 'a',
+      },
     })
   ).toMatchSnapshot()
   expect(
@@ -62,8 +62,8 @@ it('author', () => {
         name: 'main',
         version: '0.0.0',
         license: 'MIT',
-        author: { name: 'a' }
-      }
+        author: { name: 'a' },
+      },
     })
   ).toMatchSnapshot()
   expect(
@@ -72,8 +72,8 @@ it('author', () => {
         name: 'main',
         version: '0.0.0',
         license: 'MIT',
-        author: { name: 'a', email: 'a@example.com' }
-      }
+        author: { name: 'a', email: 'a@example.com' },
+      },
     })
   ).toMatchSnapshot()
 })
@@ -88,10 +88,10 @@ it('maintainers', () => {
         maintainers: [
           {
             name: 'm1',
-            email: 'm1'
-          }
-        ]
-      }
+            email: 'm1',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
   expect(
@@ -102,14 +102,14 @@ it('maintainers', () => {
         license: 'MIT',
         maintainers: [
           {
-            name: 'm1'
+            name: 'm1',
           },
           {
             name: 'm2',
-            email: 'm2@example.com'
-          }
-        ]
-      }
+            email: 'm2@example.com',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
 })
@@ -124,10 +124,10 @@ it('contributors', () => {
         contributors: [
           {
             name: 'c1',
-            email: 'c1@example.com'
-          }
-        ]
-      }
+            email: 'c1@example.com',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
   expect(
@@ -138,14 +138,14 @@ it('contributors', () => {
         license: 'MIT',
         contributors: [
           {
-            name: 'c1'
+            name: 'c1',
           },
           {
             name: 'c2',
-            email: 'c2@example.com'
-          }
-        ]
-      }
+            email: 'c2@example.com',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
 })
@@ -157,8 +157,8 @@ it('homepage', () => {
         name: 'main',
         version: '0.0.0',
         license: 'MIT',
-        homepage: 'http://example.com'
-      }
+        homepage: 'http://example.com',
+      },
     })
   ).toMatchSnapshot()
 })
@@ -170,8 +170,8 @@ it('private package', () => {
         name: 'main',
         version: '0.0.0',
         license: 'MIT',
-        private: true
-      }
+        private: true,
+      },
     })
   ).toMatchSnapshot()
   expect(
@@ -180,21 +180,21 @@ it('private package', () => {
         name: 'main',
         version: '0.0.0',
         license: 'MIT',
-        private: true
+        private: true,
       },
       deps: {
         a: {
           name: 'a',
           version: '0.0.0',
           license: 'MIT',
-          private: true
+          private: true,
         },
         b: {
           name: 'b',
           version: '0.0.0',
-          license: 'MIT'
-        }
-      }
+          license: 'MIT',
+        },
+      },
     })
   ).toMatchSnapshot()
 })
@@ -206,14 +206,14 @@ it('deps only', () => {
         b: {
           name: 'b',
           version: '0.0.0',
-          license: 'MIT'
+          license: 'MIT',
         },
         a: {
           name: 'a',
           version: '0.0.0',
-          license: 'MIT'
-        }
-      }
+          license: 'MIT',
+        },
+      },
     })
   ).toMatchSnapshot()
 })
@@ -224,25 +224,25 @@ it('pkg is extracted', () => {
       main: extract({
         name: 'main',
         version: '0.0.0',
-        license: 'MIT'
+        license: 'MIT',
       }),
       deps: {
         b: extract({
           name: 'b',
           version: '0.0.0',
-          license: 'MIT'
+          license: 'MIT',
         }),
         a: extract({
           name: 'a',
           version: '0.0.0',
-          license: 'MIT'
+          license: 'MIT',
         }),
         c: extract({
           name: 'c',
           version: '0.0.0',
-          license: 'MIT'
-        })
-      }
+          license: 'MIT',
+        }),
+      },
     })
   ).toMatchSnapshot()
 })
@@ -255,20 +255,20 @@ it('multi versions: different license', () => {
           {
             name: 'c',
             version: '2.0.0',
-            license: 'ISC'
+            license: 'ISC',
           },
           {
             name: 'c',
             version: '1.0.0',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'c',
             version: '3.0.0',
-            license: 'MIT OR ISC'
-          }
-        ]
-      }
+            license: 'MIT OR ISC',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
 })
@@ -281,20 +281,20 @@ it('multi versions: same info', () => {
           {
             name: 'c',
             version: '2.0.0',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'c',
             version: '1.0.0',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'c',
             version: '3.0.0',
-            license: 'MIT'
-          }
-        ]
-      }
+            license: 'MIT',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
 })
@@ -307,25 +307,25 @@ it('multi versions: some same info', () => {
           {
             name: 'c',
             version: '3.0.0',
-            license: 'ISC'
+            license: 'ISC',
           },
           {
             name: 'c',
             version: '2.0.0',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'c',
             version: '1.0.0',
-            license: 'MIT OR ISC'
+            license: 'MIT OR ISC',
           },
           {
             name: 'c',
             version: '4.0.0',
-            license: 'MIT'
-          }
-        ]
-      }
+            license: 'MIT',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
 })
@@ -338,25 +338,25 @@ it('multi versions: semver sort', () => {
           {
             name: 'a',
             version: '3.0.0-alpha.1',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'a',
             version: 'v2.0.0',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'a',
             version: '1.0.0',
-            license: 'MIT'
+            license: 'MIT',
           },
           {
             name: 'a',
             version: '4.0.0-rc.1',
-            license: 'MIT'
-          }
-        ]
-      }
+            license: 'MIT',
+          },
+        ],
+      },
     })
   ).toMatchSnapshot()
 })
