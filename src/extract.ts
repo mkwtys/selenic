@@ -21,7 +21,7 @@ function extractLicense(license: string | License) {
 function extractHomepage(homepage: string) {
   try {
     const url = new URL(homepage)
-    let h = `${url.origin}${url.pathname}${url.search}`
+    const h = `${url.origin}${url.pathname}${url.search}`
     if (url.hostname === 'github.com' && url.hash === '#readme') {
       return h
     }
