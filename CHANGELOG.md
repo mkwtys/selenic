@@ -1,5 +1,17 @@
 # Change Log
 
+## v0.11.0 (2020-05-20)
+
+#### :arrow_up: Dependencies
+
+- [#298](https://github.com/mkwtys/selenic/pull/298) Update dependency typescript to v3.9.3
+- [#292](https://github.com/mkwtys/selenic/pull/292) Update dependency @types/semver to v7.2.0
+- [#284](https://github.com/mkwtys/selenic/pull/284) Update dependency jest to v26
+
+#### :house: Internal
+
+- [#288](https://github.com/mkwtys/selenic/pull/288) babel build
+
 ## v0.10.0 (2020-05-01)
 
 #### :arrow_up: Dependencies
