@@ -64,7 +64,7 @@
     "@babel/preset-env": "7.15.8",
     "@babel/preset-typescript": "7.15.0",
     "@types/jest": "27.0.2",
-    "@types/node": "14.17.31",
+    "@types/node": "14.17.32",
     "@types/semver": "7.3.9",
     "jest": "27.3.1",
     "rimraf": "3.0.2",
