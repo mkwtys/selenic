@@ -26,8 +26,8 @@ export function createLicenseHeader({
       .sort()
       .map((packageName) => {
         const depsPkgs = deps[packageName]
-        if (!Array.isArray(depsPkgs)) {
-          return createEachHeader(extract(depsPkgs))
+        if (!depsPkgs || !Array.isArray(depsPkgs)) {
+          return depsPkgs ? createEachHeader(extract(depsPkgs)) : ''
         }
         const results: Package[] = []
         ;[...depsPkgs]
@@ -43,7 +43,7 @@ export function createLicenseHeader({
                 pkg.homepage === resultPkg.homepage
             )
             if (samePkgs.length) {
-              samePkgs[0].version = `${samePkgs[0].version}, ${pkg.version}`
+              samePkgs[0]!.version = `${samePkgs[0]!.version}, ${pkg.version}`
             } else {
               results.push({ ...pkg })
             }
