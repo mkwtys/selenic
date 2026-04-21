@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest'
 import { createLicenseHeader, extract } from '../'
 
 it('no package', () => {
