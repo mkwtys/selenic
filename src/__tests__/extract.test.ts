@@ -111,3 +111,18 @@ it('licenses is string', () => {
   const extracted = extract({ licenses: 'MIT' })
   expect(extracted.license).toBe('MIT')
 })
+
+it('licenses is array of strings', () => {
+  const extracted = extract({ licenses: ['MIT', 'Apache-2.0'] })
+  expect(extracted.license).toBe('MIT, Apache-2.0')
+})
+
+it('maintainers is string', () => {
+  const extracted = extract({ maintainers: 'foo' })
+  expect(extracted.maintainers).toBe('foo')
+})
+
+it('contributors is string', () => {
+  const extracted = extract({ contributors: 'foo' })
+  expect(extracted.contributors).toBe('foo')
+})
