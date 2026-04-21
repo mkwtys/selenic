@@ -79,3 +79,35 @@ it('homepage invalid url', () => {
   })
   expect(extracted.homepage).toBe('homepage')
 })
+
+it('name and version are passed through', () => {
+  const extracted = extract({ name: 'foo', version: '1.0.0' })
+  expect(extracted.name).toBe('foo')
+  expect(extracted.version).toBe('1.0.0')
+})
+
+it('private package', () => {
+  const extracted = extract({ private: true })
+  expect(extracted.private).toBe(true)
+  expect(extracted.name).toBeUndefined()
+})
+
+it('author is string', () => {
+  const extracted = extract({ author: 'foo' })
+  expect(extracted.author).toBe('foo')
+})
+
+it('author with email only (no name)', () => {
+  const extracted = extract({ author: { email: 'a@example.com' } })
+  expect(extracted.author).toBe('<a@example.com>')
+})
+
+it('author with neither name nor email', () => {
+  const extracted = extract({ author: {} })
+  expect(extracted.author).toBe('')
+})
+
+it('licenses is string', () => {
+  const extracted = extract({ licenses: 'MIT' })
+  expect(extracted.license).toBe('MIT')
+})

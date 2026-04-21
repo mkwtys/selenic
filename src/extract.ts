@@ -4,9 +4,9 @@ import { URL } from 'url'
 function extractPerson(person: string | Person) {
   if (typeof person === 'object') {
     if (person.email) {
-      return `${person.name} <${person.email}>`
+      return person.name ? `${person.name} <${person.email}>` : `<${person.email}>`
     }
-    return person.name
+    return person.name ?? ''
   }
   return person
 }
@@ -43,6 +43,8 @@ export function extract(pkg: Package): Package {
     version: pkg.version,
     license: Array.isArray(pkg.licenses)
       ? pkg.licenses.map(extractLicense).join(', ')
+      : typeof pkg.licenses === 'string'
+      ? pkg.licenses
       : pkg.license
       ? extractLicense(pkg.license)
       : pkg.license,

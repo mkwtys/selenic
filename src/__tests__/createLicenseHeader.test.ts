@@ -331,6 +331,24 @@ it('multi versions: some same info', () => {
   ).toMatchSnapshot()
 })
 
+it('does not mutate input array order', () => {
+  const pkgs = [
+    { name: 'c', version: '2.0.0', license: 'MIT' },
+    { name: 'c', version: '1.0.0', license: 'MIT' },
+  ]
+  createLicenseHeader({ deps: { c: pkgs } })
+  expect(pkgs[0].version).toBe('2.0.0')
+  expect(pkgs[1].version).toBe('1.0.0')
+})
+
+it('does not mutate input objects when merging versions', () => {
+  const c1 = { name: 'c', version: '1.0.0', license: 'MIT' }
+  const c2 = { name: 'c', version: '2.0.0', license: 'MIT' }
+  createLicenseHeader({ deps: { c: [c1, c2] } })
+  expect(c1.version).toBe('1.0.0')
+  expect(c2.version).toBe('2.0.0')
+})
+
 it('multi versions: semver sort', () => {
   expect(
     createLicenseHeader({
