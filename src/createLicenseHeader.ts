@@ -30,7 +30,7 @@ export function createLicenseHeader({
           return createEachHeader(extract(depsPkgs))
         }
         const results: Package[] = []
-        depsPkgs
+        ;[...depsPkgs]
           .sort((a, b) => compare(a.version, b.version))
           .forEach((pkg) => {
             const samePkgs = results.filter(
@@ -45,7 +45,7 @@ export function createLicenseHeader({
             if (samePkgs.length) {
               samePkgs[0].version = `${samePkgs[0].version}, ${pkg.version}`
             } else {
-              results.push(pkg)
+              results.push({ ...pkg })
             }
           })
         return results.map((pkg, i) => createEachHeader(extract(pkg), { hierarchy: i === 0 ? 1 : 2 })).join('')
