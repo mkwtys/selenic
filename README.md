@@ -19,7 +19,7 @@ import { createLicenseHeader } from '@selenic/core'
 
 createLicenseHeader({
   main: {
-    name: 'main-pakcage',
+    name: 'main-package',
     license: 'MIT'
   },
   deps: {
@@ -50,7 +50,7 @@ createLicenseHeader({
 // /**
 //  * @license
 //  *
-//  * main-pakcage:
+//  * main-package:
 //  *   license: MIT
 //  *
 //  * dep-package:
