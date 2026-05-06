@@ -22,6 +22,6 @@ export type Package =
       [k: string]: any
     }
   | {
-      private?: boolean
+      private: true
       [k: string]: any
     }
