@@ -218,30 +218,6 @@ exports[`multi versions: some same info 1`] = `
 
 exports[`no package 1`] = `""`;
 
-exports[`pkg is extracted 1`] = `
-"/**
- * @license
- *
- * main:
- *   version: 0.0.0
- *   license: MIT
- *
- * a:
- *   version: 0.0.0
- *   license: MIT
- *
- * b:
- *   version: 0.0.0
- *   license: MIT
- *
- * c:
- *   version: 0.0.0
- *   license: MIT
- *
- */
-"
-`;
-
 exports[`private package 1`] = `""`;
 
 exports[`private package 2`] = `

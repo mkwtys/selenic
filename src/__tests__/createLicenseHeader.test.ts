@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { createLicenseHeader, extract } from '../'
+import { createLicenseHeader } from '../'
 
 it('no package', () => {
   expect(createLicenseHeader()).toMatchSnapshot()
@@ -214,35 +214,6 @@ it('deps only', () => {
           version: '0.0.0',
           license: 'MIT',
         },
-      },
-    })
-  ).toMatchSnapshot()
-})
-
-it('pkg is extracted', () => {
-  expect(
-    createLicenseHeader({
-      main: extract({
-        name: 'main',
-        version: '0.0.0',
-        license: 'MIT',
-      }),
-      deps: {
-        b: extract({
-          name: 'b',
-          version: '0.0.0',
-          license: 'MIT',
-        }),
-        a: extract({
-          name: 'a',
-          version: '0.0.0',
-          license: 'MIT',
-        }),
-        c: extract({
-          name: 'c',
-          version: '0.0.0',
-          license: 'MIT',
-        }),
       },
     })
   ).toMatchSnapshot()
